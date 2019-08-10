@@ -21,7 +21,7 @@ def auto_hover():
 	vel_msg.angular.y = 0
 	vel_msg.angular.z = 0
 	pub.publish(vel_msg)
-def set_velocity(linear_x,linear_y,linear_z,angular_x,angular_y,angular_z):
+def set_velocity(linear_x =0 ,linear_y = 0,linear_z = 0,angular_x = 0,angular_y = 0,angular_z = 0):
 	pub = rospy.Publisher("/cmd_vel",Twist,queue_size=10)
 	vel_msg = Twist()
 	vel_msg.linear.x = linear_x
